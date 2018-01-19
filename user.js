@@ -10,8 +10,8 @@ var UserSearch = function(name, location) {
        });
     };
   };
-  var Jason = new UserSearch("Jason","Tucson")
-  Jason.getWeather();
+  // var Jason = new UserSearch("Jason","Tucson")
+  // Jason.getWeather();
   module.exports = {
     UserSearch: UserSearch,
   }
