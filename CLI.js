@@ -1,5 +1,5 @@
 var inquirer = require("inquirer");
-var userSearch = require("./user.js");
+var UserSearch = require("./user.js").UserSearch;
 var adminSearch = require("./admin.js");
 
 
@@ -20,7 +20,7 @@ inquirer.prompt([
 		name: "location",
 		message: "What city do you want to search the weather for?",
 		when: function(answers) {
-			return (answer.userOrAdmin === "user");
+			return (answers.userOrAdmin === "user");
 		}
 	},
 	{
@@ -32,12 +32,13 @@ inquirer.prompt([
 		}
 	}
 ]).then(function(answers) {
-	if (answer.userOrAdmin === "user")
+	if (answers.userOrAdmin === "user")
 	{
-		userSearch(answers.person, answers.location);
+		var newPerson = new UserSearch(answers.person, answers.location);
+		newPerson.getWeather();
 	}
 	else if (answers.userOrAdmin === "admin")
 	{
 		adminSearch();
 	}
-	});
+});
