@@ -33,7 +33,8 @@ inquirer.prompt([
 ]).then(function(answers) {
 	if (answers.userOrAdmin === "user")
 	{
-		admin.WeatherAdmin.newUserSearch(answers.name, answers.location);
+		var newAdmin = new admin();
+		newAdmin.newUserSearch(answers.person, answers.location);
 	}
 	else if (answers.userOrAdmin === "admin")
 	{
