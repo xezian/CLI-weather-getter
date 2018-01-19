@@ -40,4 +40,4 @@ inquirer.prompt([
 	{
 		adminSearch();
 	}
-  }
+	});
