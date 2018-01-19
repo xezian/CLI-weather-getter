@@ -1,4 +1,4 @@
-var UserSearch = require("./UserSearch");
+var UserSearch = require("./user.js").UserSearch;
 var fs = require("fs");
 
 // create a weatheradmin constructor
