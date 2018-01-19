@@ -1,6 +1,5 @@
 var inquirer = require("inquirer");
-var UserSearch = require("./user.js").UserSearch;
-var adminSearch = require("./admin.js");
+var admin = require("./admin.js");
 
 
 inquirer.prompt([
@@ -34,11 +33,10 @@ inquirer.prompt([
 ]).then(function(answers) {
 	if (answers.userOrAdmin === "user")
 	{
-		var newPerson = new UserSearch(answers.person, answers.location);
-		newPerson.getWeather();
+		admin.WeatherAdmin.newUserSearch(answers.name, answers.location);
 	}
 	else if (answers.userOrAdmin === "admin")
 	{
-		adminSearch();
+		//
 	}
 });
