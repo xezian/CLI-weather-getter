@@ -1,0 +1,26 @@
+{
+  "name": "cli-weather-getter",
+  "version": "1.0.0",
+  "description": "get weather!",
+  "main": "CLI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xezian/CLI-weather-getter.git"
+  },
+  "keywords": [
+    "weather"
+  ],
+  "author": "powerpod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xezian/CLI-weather-getter/issues"
+  },
+  "homepage": "https://github.com/xezian/CLI-weather-getter#readme",
+  "dependencies": {
+    "inquirer": "^5.0.0",
+    "weather-js": "^2.0.0"
+  }
+}
